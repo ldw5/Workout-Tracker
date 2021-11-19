@@ -38,7 +38,7 @@ router.post('/api/workouts', ({body}, res) =>{
 });
 
 //workout range
-router.get('/api/workouts/range', (res,res) =>{
+router.get('/api/workouts/range', (req,res) =>{
     Fitness.aggregate([{
         $addFields:{
             totalDuration:{$sum: '$exercises.duration'},
